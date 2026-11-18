@@ -102,7 +102,17 @@ a:focus-visible,
   margin-top: 0.75rem;
   color: var(--jungle-green);
 }
-.product-price { font-weight: 600; margin-bottom: 0.25rem; }
+
+/* Price and Order now sit on one line: ₱499 • Order now */
+.product-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.product-price { font-weight: 600; margin: 0; }
+.meta-dot { color: var(--prussian-blue); }
 .order-link {
   display: inline-block;
   min-height: 44px;
