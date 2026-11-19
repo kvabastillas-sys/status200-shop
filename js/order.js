@@ -1,21 +1,54 @@
-let quantity = 1;
+// Quantity, size, and Order now button
 
-function changeQuantity(amount) {
-    quantity += amount;
+var quantity = 1;
 
-    if (quantity < 1) {
-        quantity = 1;
+var quantityText = document.getElementById("quantity");
+var sizeButtons = document.querySelectorAll(".size-btn");
+var orderButton = document.getElementById("order-btn");
+
+// Plus and minus buttons
+document.getElementById("qty-minus").addEventListener("click", function () {
+  if (quantity > 1) {
+    quantity = quantity - 1;
+  }
+  quantityText.textContent = quantity;
+});
+
+document.getElementById("qty-plus").addEventListener("click", function () {
+  quantity = quantity + 1;
+  quantityText.textContent = quantity;
+});
+
+// Size buttons: only one can be selected
+for (var i = 0; i < sizeButtons.length; i++) {
+  sizeButtons[i].addEventListener("click", function () {
+    for (var j = 0; j < sizeButtons.length; j++) {
+      sizeButtons[j].classList.remove("active");
+      sizeButtons[j].setAttribute("aria-pressed", "false");
     }
-
-    document.getElementById("quantity").textContent = quantity;
+    this.classList.add("active");
+    this.setAttribute("aria-pressed", "true");
+  });
 }
 
-document.querySelectorAll(".size-btn").forEach(button => {
-    button.addEventListener("click", function () {
-        document.querySelectorAll(".size-btn").forEach(btn => {
-            btn.classList.remove("active");
-        });
+// Order now: open the email app with the order details
+orderButton.addEventListener("click", function () {
+  var product = orderButton.getAttribute("data-product");
+  var size = document.querySelector(".size-btn.active").textContent;
 
-        this.classList.add("active");
-    });
+  var subject = "Order: " + product;
+  var message =
+    "Hello Status 200,\n\n" +
+    "I would like to order:\n" +
+    "Product: " + product + "\n" +
+    "Size: " + size + "\n" +
+    "Quantity: " + quantity + "\n\n" +
+    "Name:\n" +
+    "Delivery address:\n" +
+    "Contact number:\n";
+
+  window.location.href =
+    "mailto:orders@examplewebsite142.com" +
+    "?subject=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(message);
 });
