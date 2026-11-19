@@ -92,8 +92,8 @@ a:focus-visible,
 .product-card { background: transparent; max-width: 320px; margin: 0 auto; }
 .product-img {
   aspect-ratio: 1 / 1;
-  object-fit: cover;
-  background-color: #ECECE6;
+  object-fit: contain;
+  background-color: transparent;
   width: 100%;
   height: auto;
 }
