@@ -60,6 +60,7 @@ a:focus-visible,
   text-decoration-thickness: 3px;
   text-underline-offset: 6px;
 }
+.navbar-toggler { min-width: 44px; min-height: 44px; }
 
 /* Hero */
 .hero-card { background-color: var(--honeydew); }
