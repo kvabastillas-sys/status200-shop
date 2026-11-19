@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Don't Be Late Tee by Status 200. Pick a size and order by email.">
+  <title>Status 200 | Do Good Work Tee</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/product.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header>
+    <nav class="navbar navbar-expand-md site-nav" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.svg" alt="Status 200 home" height="36">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNav" aria-controls="mainNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#featured-products">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="container product-section">
+    <div class="row align-items-center">
+
+      <div class="col-md-6 text-center">
+        <img src="images/do-good-work-tee.svg" alt="Do Good Work Tee, front view"
+             class="product-img" width="600" height="600">
+      </div>
+
+      <div class="col-md-6">
+        <div class="product-details">
+          <h1 class="product-heading">Do Good Work Tee</h1>
+          <p class="product-price">₱499</p>
+
+          <p class="product-description">
+            Where comfort meets style. The Do Good Work Tee is built for your
+            everyday flow, whether you're meeting up with friends, heading into
+            work, or taking a casual stroll through the city. Crafted from 100%
+            breathable cotton, it keeps you cool, light, and effortlessly stylish
+            wherever you go. Don't Be Last to get this Tee.
+          </p>
+
+          <div class="size-options" role="group" aria-label="Size">
+            <button class="size-btn" type="button" aria-pressed="false">S</button>
+            <button class="size-btn active" type="button" aria-pressed="true">M</button>
+            <button class="size-btn" type="button" aria-pressed="false">L</button>
+            <button class="size-btn" type="button" aria-pressed="false">XL</button>
+          </div>
+
+          <div class="order-controls">
+            <div class="quantity-control" role="group" aria-label="Quantity">
+              <button type="button" id="qty-minus" aria-label="Decrease quantity">-</button>
+              <span id="quantity" aria-live="polite">1</span>
+              <button type="button" id="qty-plus" aria-label="Increase quantity">+</button>
+            </div>
+            <button type="button" class="order-button" id="order-btn"
+                    data-product="Don't Be Late Tee" aria-describedby="order-note">Order now</button>
+          </div>
+          <p id="order-note" class="visually-hidden">Opens your email app with your order ready to send.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer py-5">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+      <nav aria-label="Footer navigation">
+        <ul class="list-unstyled d-flex gap-4 mb-0">
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="privacy.html#terms">Terms</a></li>
+        </ul>
+      </nav>
+      <p class="mb-0">© 2026 Status 200</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/order.js"></script>
+</body>
+</html>
