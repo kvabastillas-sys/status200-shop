@@ -186,6 +186,16 @@ a:focus-visible,
   font-size: clamp(2.25rem, 5vw, 3rem);
 }
 
+.policy-date {
+  font-size: 1.125rem;
+}
+
+@media (min-width: 992px) {
+  .policy-title {
+    white-space: nowrap;
+  }
+}
+
 .toc {
   background-color: var(--honeydew);
   border-radius: 12px;
