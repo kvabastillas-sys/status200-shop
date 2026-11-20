@@ -19,10 +19,10 @@ function buildMailto(){
     "Product: " + product + "\r\n\r\n" +
     message;
 
-    return (
-      "mailto:" + TO_ADDRESS +
-      "?subject=" + encodeURIComponent(subject) +
-      "&body=" + encodeURIComponent(body)
+ return (
+    "mailto:" + TO_ADDRESS +
+    "?subject=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(body)
     );
 }
 
