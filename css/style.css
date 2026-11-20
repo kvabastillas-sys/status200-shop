@@ -183,7 +183,7 @@ a:focus-visible,
 }
 
 .policy-title {
-  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-size: clamp(2.25rem, 4vw, 3rem);
 }
 
 .policy-date {
