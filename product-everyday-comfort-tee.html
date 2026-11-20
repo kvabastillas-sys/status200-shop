@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Everyday Comfort Tee by Status 200. Choose your size and order by email.">
+  <meta name="description" content="Everyday Comfort Tee by Status 200. Pick a size and order by email.">
   <title>Status 200 | Everyday Comfort Tee</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
@@ -51,13 +51,14 @@
           <p class="product-price">₱499</p>
 
           <p class="product-description">
-            Your go-to tee for every day of the week. 
-            The Everyday Comfort Tee is made from soft, breathable 100% cotton with a relaxed fit that moves with you, from slow mornings to long days out. 
-            Easy to wear and easy to love, it’s the one you’ll keep reaching for.
+            Where comfort meets style. The Everyday Comfort Tee is made for your daily
+            routine, whether you're running errands, catching up over coffee, or relaxing
+            at home. Crafted from 100% breathable cotton, it keeps you cool, comfortable,
+            and effortlessly stylish from morning to night.
           </p>
 
           <p class="field-label">Size</p>
-          <div class="size-options">
+          <div class="size-options" role="group" aria-label="Size">
             <button class="size-btn" type="button" aria-pressed="false">S</button>
             <button class="size-btn active" type="button" aria-pressed="true">M</button>
             <button class="size-btn" type="button" aria-pressed="false">L</button>
@@ -66,19 +67,15 @@
 
           <p class="field-label">Quantity</p>
           <div class="order-controls">
-            <div class="quantity-control">
+            <div class="quantity-control" role="group" aria-label="Quantity">
               <button type="button" id="qty-minus" aria-label="Decrease quantity">-</button>
               <span id="quantity" aria-live="polite">1</span>
               <button type="button" id="qty-plus" aria-label="Increase quantity">+</button>
             </div>
             <button type="button" class="order-button" id="order-btn"
-                    data-product="Everyday Comfort Tee">Order now</button>
+                    data-product="Everyday Comfort Tee" aria-describedby="order-note">Order now</button>
           </div>
-
-          <p class="order-note">
-            Order now opens your email app with your order ready to send.
-            Add your name, address and contact number before sending.
-          </p>
+          <p id="order-note" class="order-note">Order now opens your email app with your order ready to send. Add your name, address and contact number before sending.</p>
         </div>
       </div>
 
