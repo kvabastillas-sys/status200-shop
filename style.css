@@ -1,3 +1,5 @@
+/* Custom styles for Status 200. Linked after Bootstrap. */
+
 :root {
   --jungle-green: #1FA971;
   --prussian-blue: #14213D;
@@ -19,6 +21,7 @@ h1, h2, h3 {
   color: var(--prussian-blue);
 }
 
+/* Skip link and focus */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -38,6 +41,7 @@ a:focus-visible,
   box-shadow: none;
 }
 
+/* Navbar */
 .site-nav { background-color: var(--white-smoke); }
 .site-nav .nav-link {
   color: var(--prussian-blue);
@@ -58,6 +62,7 @@ a:focus-visible,
 }
 .navbar-toggler { min-width: 44px; min-height: 44px; }
 
+/* Hero */
 .hero-card { background-color: var(--honeydew); }
 .hero-card h1 { font-size: 3rem; margin-bottom: 0.5rem; }
 .hero-card .accent { color: var(--jungle-green); }
@@ -79,6 +84,7 @@ a:focus-visible,
   color: #fff;
 }
 
+/* Featured products */
 .section-title {
   font-size: 1rem;
   text-transform: uppercase;
@@ -91,29 +97,14 @@ a:focus-visible,
   background-color: transparent;
   width: 100%;
   height: auto;
-  transition: transform 0.3s ease;
 }
-.product-card:hover .product-img,
-.product-card:focus-within .product-img {
-  transform: scale(1.05);
-}
-@media (prefers-reduced-motion: reduce) {
-  .product-img {
-    transition: none;
-  }
-  .product-card:hover .product-img,
-  .product-card:focus-within .product-img {
-    transform: none;
-  }
-}
-.product-name,
-.product-name a {
+.product-name {
   font-size: 1.25rem;
   margin-top: 0.75rem;
-  color: var(--honeydew);
-  -webkit-text-stroke: 1px var(--jungle-green);
+  color: var(--jungle-green);
 }
 
+/* Price and Order now sit on one line: ₱499 • Order now */
 .product-meta {
   display: flex;
   justify-content: center;
@@ -135,25 +126,29 @@ a:focus-visible,
 }
 .order-link:hover { color: var(--prussian-blue); }
 
+/* About */
 .about-section { background-color: var(--honeydew); }
 .about-title { font-size: 1.25rem; white-space: nowrap; }
 
+/* Footer */
 .site-footer { background-color: var(--prussian-blue); color: #fff; }
 .site-footer a {
   display: inline-block;
   min-height: 44px;
   line-height: 44px;
   color: #fff;
-  text-decoration: none;
+  text-decoration: underline;
   text-underline-offset: 4px;
 }
 .site-footer a:focus-visible { outline-color: #fff; }
 
+/* Mobile */
 @media (max-width: 767.98px) {
   .hero-card h1 { font-size: 2.25rem; }
   .btn-shop { width: 100%; }
 }
 
+/*Contact*/
 .contact-box {
   background-color: #e4e3e0;
 }
@@ -173,54 +168,20 @@ a:focus-visible,
   background-color: #3a8858;
   color: #181d31;
 }
-
+/* stop text spilling*/
 .contact-box,
 .info-box {
   overflow-wrap: break-word;
 }
 
-.policy-title {
-  font-size: clamp(2.25rem, 5vw, 3rem);
-}
-
-.toc {
-  background-color: var(--honeydew);
-  border-radius: 12px;
-  padding: 1rem 1.25rem;
-}
-.toc a {
+/*added this to fix the site breaking when diff browser window sizes*/
+body {
   display: flex;
-  align-items: center;
-  min-height: 44px;
-  color: var(--prussian-blue);
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 
-.btn-contact {
-  background-color: var(--jungle-green);
-  color: var(--prussian-blue);
-  font-weight: 600;
-  border: 0;
-  border-radius: 8px;
-  padding: 0.75rem 1.5rem;
-  min-height: 44px;
-}
-.btn-contact:hover {
-  background-color: var(--prussian-blue);
-  color: #fff;
-}
-
-.policy-section {
-  scroll-margin-top: 1rem;
-}
-.policy-section h2 {
-  font-size: 1.5rem;
-}
-
-.divider {
-  border: 0;
-  border-top: 2px solid var(--jungle-green);
-  opacity: 1;
-  margin: 1.5rem 0;
+main {
+  flex: 1;
 }
