@@ -11,6 +11,9 @@ body {
   font-weight: 400;
   color: var(--prussian-blue);
   background-color: var(--white-smoke);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1, h2, h3 {
@@ -223,4 +226,8 @@ a:focus-visible,
   border-top: 2px solid var(--jungle-green);
   opacity: 1;
   margin: 1.5rem 0;
+}
+
+main {
+  flex: 1;
 }
