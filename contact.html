@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <script src="js/mailto.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -42,38 +43,36 @@
       <p class="contact-subtitle mb-4">Questions about an order, a product, or sizing? Send us a message and we will reply soon.</p>
 
       <div class="row g-4 align-items-start">
-        <!--MAIN CONTACT FORM-->
         <div class="col-md-7"> 
           <div class="contact-box p-4 rounded-4">
             <h2 class="h4 mb-3">Send us a message</h2>
 
-            <!-- ADDED: form instructions -->
             <p id="formNote" class="mb-3">All fields are required except Product. When you press Send Message, your email app will open with your message ready to send.</p>
 
-            <form id="contactForm" aria-describedby="formNote">
+            <form id="contactForm" class="contactForm" action="#" method="post" aria-describedby="formNote">
               <div class="row g-3">
                 <div class="col-md-6">
-                  <label for="fullName" class="form-label">Full name</label>
+                  <label for="fullName" class="form-label"><strong>Full name</strong></label>
                   <input type="text" class="form-control" id="fullName" placeholder="Your name" required>
                 </div>
 
                 <div class="col-md-6">
-                  <label for="email" class="form-label">Email address</label>
+                  <label for="email" class="form-label"><strong>Email address</strong></label>
                   <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
                 </div>
 
                 <div class="col-md-6">
-                  <label for="inquiryType" class="form-label">Inquiry type</label>
+                  <label for="inquiryType" class="form-label"><strong>Inquiry type</strong></label>
                   <select class="form-select" id="inquiryType" required>
                     <option value="" selected disabled>Select an inquiry type</option>
-                    <option value="order">Order inquiry</option>
-                    <option value="product">Product or sizing</option>
-                    <option value="general">General question</option>
+                    <option value="Order Inquiry">Order inquiry</option>
+                    <option value="Product or Sizing">Product or sizing</option>
+                    <option value="General Inquiry">General question</option>
                   </select>
                 </div>
 
                 <div class="col-md-6">
-                  <label for="product" class="form-label">Product (optional)</label>
+                  <label for="product" class="form-label"><strong>Product (optional)</strong></label>
                   <select class="form-select" id="product">
                     <option value="" selected>Select a product</option>
                     <option value="dont-be-late">Don't Be Late Tee</option>
@@ -83,7 +82,7 @@
                 </div>
 
                 <div class="col-12">
-                  <label for="message" class="form-label">Message</label>
+                  <label for="message" class="form-label"><strong>Message</strong></label>
                   <textarea class="form-control" id="message" rows="5" placeholder="Type your message here" required></textarea>
                 </div>
 
@@ -93,22 +92,18 @@
               </div>
             </form>
 
-            <!-- CHANGED: message text, added role/aria-live -->
             <div id="confirmation" class="alert alert-success mt-3 mb-0 d-none" role="status" aria-live="polite">
               Your email app should now open with your message. Please press Send in your email app to complete it.
             </div>
           </div>    
         </div>
 
-        <!--CONTACT INFORMATION BOX-->
-        <!-- CHANGED: col-md-3 to col-md-5 to fill the row -->
         <div class="col-md-5">
           <div class="info-box p-4 rounded-4">
             <h2 class="h4 mb-3">Contact information</h2>
 
             <p class="mb-3">
               <small class="text-muted d-block">Email</small>
-              <!-- CHANGED: correct store email, now a link -->
               <strong><a href="mailto:hello@examplewebsite142.com">hello@examplewebsite142.com</a></strong>
             </p>
 
@@ -145,6 +140,5 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
 </body>
 </html>
