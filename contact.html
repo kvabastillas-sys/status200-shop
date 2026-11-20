@@ -47,7 +47,10 @@
           <div class="contact-box p-4 rounded-4">
             <h2 class="h4 mb-3">Send us a message</h2>
 
-            <form id="contactForm">
+            <!-- ADDED: form instructions -->
+            <p id="formNote" class="mb-3">All fields are required except Product. When you press Send Message, your email app will open with your message ready to send.</p>
+
+            <form id="contactForm" aria-describedby="formNote">
               <div class="row g-3">
                 <div class="col-md-6">
                   <label for="fullName" class="form-label">Full name</label>
@@ -90,20 +93,23 @@
               </div>
             </form>
 
-            <div id="confirmation" class="alert alert-success mt-3 mb-0 d-none">
-              Message sent! We will reply soon.
+            <!-- CHANGED: message text, added role/aria-live -->
+            <div id="confirmation" class="alert alert-success mt-3 mb-0 d-none" role="status" aria-live="polite">
+              Your email app should now open with your message. Please press Send in your email app to complete it.
             </div>
           </div>    
         </div>
 
         <!--CONTACT INFORMATION BOX-->
-        <div class="col-md-3">
+        <!-- CHANGED: col-md-3 to col-md-5 to fill the row -->
+        <div class="col-md-5">
           <div class="info-box p-4 rounded-4">
             <h2 class="h4 mb-3">Contact information</h2>
 
             <p class="mb-3">
               <small class="text-muted d-block">Email</small>
-              <strong>inquiries@status200.com</strong>
+              <!-- CHANGED: correct store email, now a link -->
+              <strong><a href="mailto:hello@examplewebsite142.com">hello@examplewebsite142.com</a></strong>
             </p>
 
             <p class="mb-3">
