@@ -149,11 +149,10 @@ a:focus-visible,
 .site-footer a:hover,
 .site-footer a:focus {
   text-decoration: none;
-}.featured-products h3 a,
+.featured-products h3 a,
 .featured-products h3 {
   color: #D9F2E6;
-  -webkit-text-stroke: 3px #1FA971;
-  paint-order: stroke fill;
+  -webkit-text-stroke: 1px #1FA971;
 }
 .site-footer a,
 .site-footer a:hover,
